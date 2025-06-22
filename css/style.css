@@ -1,0 +1,13 @@
+main{
+    min-height: calc(100vh - 133px);
+}
+.logo{
+    display: inline-block;
+}
+.logo img{
+    max-width: 40px;
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 50%;
+}
