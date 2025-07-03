@@ -42,6 +42,9 @@
             <li class="nav-item">
               <a class="nav-link" href="pricing.html">Pricing</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">Profile</a>
+            </li>
           </ul>
           <span class="nav-spacer"></span>
           <ul class="navbar-nav">
@@ -62,16 +65,6 @@
         <!-- Code start -->
         <form action="/action_page.php">
           <div class="mb-3 mt-3">
-            <label for="name" class="form-label">Name:</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Enter name"
-              class="form-control"
-            />
-          </div>
-          <div class="mb-3 mt-3">
             <label for="email" class="form-label">Email:</label>
             <input
               type="email"
@@ -86,44 +79,24 @@
             <input
               type="password"
               class="form-control"
-              id="pwd"
+              id="password"
               placeholder="Enter password"
-              name="pswd"
+              name="password"
             />
           </div>
-          <div class="mb-3">
-            <label class="form-label">Gender:</label>
-            <div class="form-check-inline">
-              <input
-                type="radio"
-                class="form-check-input"
-                id="male"
-                name="male"
-                value="male"
-                checked
-              />
-
-              <label class="form-check-label" for="male">Male</label>
-            </div>
-            <div class="form-check-inline">
-              <input
-                type="radio"
-                class="form-check-input"
-                id="female"
-                name="female"
-                value="female"
-              />
-
-              <label class="form-check-label" for="female">Female</label>
-            </div>
-          </div>
-          <div class="form-check mb-3">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" name="remember" />
-              Remember me
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="terms" />
+            <label class="form-check-label" for="terms">
+              I agree to the
+              <a href="pricing.html">Privacy Policy</a> and
+              <a href="features.html">T &amp; C</a>
             </label>
           </div>
-          <input type="submit" class="btn btn-primary" value="Submit" />
+          <input type="submit" class="btn btn-primary mb-3" value="Sign In" />
+          <p class="text-center">
+            Have no account?
+            <a href="register.html"> Sign Up</a>
+          </p>
           <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
         </form>
         <!-- Code end -->

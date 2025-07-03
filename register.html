@@ -42,6 +42,9 @@
             <li class="nav-item">
               <a class="nav-link" href="pricing.html">Pricing</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">Profile</a>
+            </li>
           </ul>
           <span class="nav-spacer"></span>
           <ul class="navbar-nav">
@@ -60,7 +63,7 @@
       <h3 class="text-center pt-4 mb-3">Register Page</h3>
       <div class="container">
         <!-- Code start -->
-        <form action="/action_page.php">
+        <form action="/action_page.php" onsubmit="handleRegister(event)">
           <div class="mb-3 mt-3">
             <label for="name" class="form-label">Name:</label>
             <input
@@ -86,10 +89,56 @@
             <input
               type="password"
               class="form-control"
-              id="pwd"
+              id="password"
               placeholder="Enter password"
-              name="pswd"
+              name="password"
             />
+          </div>
+          <div class="mb-3">
+            <label for="confirmPassword" class="form-label"
+              >Confirm Password:</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="confirmPassword"
+              placeholder="Enter confirm password"
+              name="confirmPassword"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="dobPicker" class="form-label">Date of Birth</label>
+            <input type="date" class="form-control" id="dobPicker" />
+          </div>
+          <div class="mb-3">
+            <label for="icon" class="form-label">Profile icon</label>
+            <input
+              type="file"
+              accept="image/*"
+              class="form-control"
+              id="icon"
+              name="icon"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="city" class="form-label">City:</label>
+            <select class="form-select" id="city" name="citylist">
+              <option>Select city</option>
+              <option>Lucknow</option>
+              <option>Kanpur</option>
+              <option>Agra</option>
+              <option>Sitapur</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="state" class="form-label">State:</label>
+            <select class="form-select" id="state" name="state">
+              <option>Select state</option>
+              <option>U P</option>
+              <option>M P</option>
+              <option>R J</option>
+              <option>J K</option>
+            </select>
           </div>
           <div class="mb-3">
             <label class="form-label">Gender:</label>
@@ -98,7 +147,7 @@
                 type="radio"
                 class="form-check-input"
                 id="male"
-                name="male"
+                name="gender"
                 value="male"
                 checked
               />
@@ -110,20 +159,38 @@
                 type="radio"
                 class="form-check-input"
                 id="female"
-                name="female"
+                name="gender"
                 value="female"
               />
 
               <label class="form-check-label" for="female">Female</label>
             </div>
           </div>
+          <div class="form-floating mb-3">
+            <textarea
+              class="form-control"
+              id="comment"
+              name="comment"
+              placeholder="Comment goes here"
+            ></textarea>
+            <label for="comment">Comments</label>
+          </div>
           <div class="form-check mb-3">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" name="remember" />
+            <label class="form-check-label" for="remember">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="remember"
+                name="remember"
+              />
               Remember me
             </label>
           </div>
-          <input type="submit" class="btn btn-primary" value="Submit" />
+          <input type="submit" class="btn btn-primary mb-3" value="Submit" />
+          <p class="text-center">
+            Already have account?
+            <a href="login.html"> Log In</a>
+          </p>
           <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
         </form>
         <!-- Code end -->
